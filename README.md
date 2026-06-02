@@ -13,7 +13,7 @@
 ## Τεχνολογίες
 
 ### Backend
-- C# / .NET 8
+- C# / .NET 10
 - ASP.NET Core Web API
 - Entity Framework Core
 - ASP.NET Core Identity + JWT Authentication
@@ -51,7 +51,7 @@
 
 Για να τρέξεις την εφαρμογή τοπικά χρειάζεσαι:
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Node.js](https://nodejs.org/) (v18+) & npm
 - [Angular CLI](https://angular.io/cli): `npm install -g @angular/cli`
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (ή SQL Server Express)
