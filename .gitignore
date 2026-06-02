@@ -1,0 +1,16 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.log
+
+# Angular
+gymapp-client/node_modules/
+gymapp-client/dist/
+
+# Sensitive files
+**/appsettings.Development.json
+
+# Misc

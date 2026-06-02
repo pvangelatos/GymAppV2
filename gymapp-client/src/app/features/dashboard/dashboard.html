@@ -1,0 +1,52 @@
+<div class="container-fluid px-4 py-4">
+  <div class="page-header">
+  <h2><i class="ti ti-layout-dashboard" style="color:#606c38; font-size:22px;"></i> Dashboard</h2>
+  <p style="color:#606c38;" class="mb-0">Welcome back, {{ firstname }}!</p>
+</div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-md-3">
+      <div class="stat-card" style="background:#e9edc9; color:#283618;">
+        <div class="stat-number">{{ totalMembers }}</div>
+        <div class="stat-label">Total Members</div>
+        <a routerLink="/members" class="btn btn-sm mt-3"
+          style="background:rgba(96,108,56,0.15); color:#283618; border:none; border-radius:8px;">
+          View All →
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="stat-card" style="background:#fefae0; border: 1.5px solid #e9edc9; color:#283618;">
+        <div class="stat-number">{{ totalTrainers }}</div>
+        <div class="stat-label">Total Trainers</div>
+        <a routerLink="/trainers" class="btn btn-sm mt-3"
+          style="background:rgba(96,108,56,0.15); color:#283618; border:none; border-radius:8px;">
+          View All →
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="stat-card" style="background:#dde7c7; color:#283618;">
+        <div class="stat-number">{{ totalSubscriptions }}</div>
+        <div class="stat-label">Active Subscriptions</div>
+        <a routerLink="/subscriptions" class="btn btn-sm mt-3"
+          style="background:rgba(96,108,56,0.15); color:#283618; border:none; border-radius:8px;">
+          View All →
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="stat-card" style="background:#f5f0e8; border: 1.5px solid #e9edc9; color:#283618;">
+        <div class="stat-number">{{ totalBookings }}</div>
+        <div class="stat-label">Total Bookings</div>
+        <a routerLink="/bookings" class="btn btn-sm mt-3"
+          style="background:rgba(96,108,56,0.15); color:#283618; border:none; border-radius:8px;">
+          View All →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

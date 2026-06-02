@@ -1,0 +1,32 @@
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <i class="ti ti-barbell"></i> GymApp V2
+  </div>
+
+  <nav class="sidebar-nav">
+    <a routerLink="/dashboard" routerLinkActive="active" class="sidebar-link">
+      <i class="ti ti-layout-dashboard"></i> Dashboard
+    </a>
+    <a routerLink="/members" routerLinkActive="active" class="sidebar-link">
+      <i class="ti ti-users"></i> Members
+    </a>
+    <a routerLink="/subscriptions" routerLinkActive="active" class="sidebar-link">
+      <i class="ti ti-clipboard-list"></i> Subscriptions
+    </a>
+    <a routerLink="/bookings" routerLinkActive="active" class="sidebar-link">
+      <i class="ti ti-calendar"></i> Bookings
+    </a>
+    <a routerLink="/trainers" routerLinkActive="active" class="sidebar-link">
+      <i class="ti ti-user-star"></i> Trainers
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="sidebar-user">
+      <i class="ti ti-user-circle"></i> {{ firstname }}
+    </div>
+    <button class="sidebar-logout" (click)="logout()">
+      <i class="ti ti-logout"></i> Logout
+    </button>
+  </div>
+</div>
