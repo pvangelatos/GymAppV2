@@ -13,7 +13,7 @@
 ## Τεχνολογίες
 
 ### Backend
-- C# / .NET 8
+- C# / .NET 10
 - ASP.NET Core Web API
 - Entity Framework Core
 - ASP.NET Core Identity + JWT Authentication
@@ -51,7 +51,7 @@
 
 Για να τρέξεις την εφαρμογή τοπικά χρειάζεσαι:
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Node.js](https://nodejs.org/) (v18+) & npm
 - [Angular CLI](https://angular.io/cli): `npm install -g @angular/cli`
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (ή SQL Server Express)
@@ -72,7 +72,7 @@ cd GymAppV2
 
 #### 2α. Σύνδεση με βάση δεδομένων
 
-Άνοιξε το αρχείο `GymApp.API/appsettings.json` και ενημέρωσε το connection string:
+Άνοιξε το αρχείο `GymAppV2.API/appsettings.json` και ενημέρωσε το connection string:
 
 ```json
 "ConnectionStrings": {
@@ -93,8 +93,8 @@ dotnet ef database update
 dotnet run
 ```
 
-Το API θα τρέχει στο: `https://localhost:7000`  
-Η τεκμηρίωση Scalar στο: `https://localhost:7000/scalar`
+Το API θα τρέχει στο URL που εμφανίζεται στο terminal μετά το `dotnet run` (π.χ. `http://localhost:5112`)  
+Η τεκμηρίωση Scalar στο: `http://localhost:{port}/scalar`
 
 ---
 
@@ -107,6 +107,31 @@ ng serve
 ```
 
 Το frontend θα τρέχει στο: `http://localhost:4200`
+
+---
+
+### 4. Πρώτη Εκκίνηση — Δημιουργία Χρήστη
+
+Μετά την εκκίνηση του backend, δημιούργησε τον πρώτο χρήστη μέσω του Scalar (`http://localhost:{port}/scalar`) ή του Postman:
+
+```
+POST http://localhost:{port}/api/auth/register
+```
+
+```json
+{
+  "firstname": "Admin",
+  "lastname": "User",
+  "email": "youremail@example.com",
+  "password": "YourPassword@123",
+  "phone": "6900000000",
+  "birthdate": "1990-01-01"
+}
+```
+
+> **Σημείωση για τον κωδικό:** Απαιτείται τουλάχιστον 8 χαρακτήρες, ένα κεφαλαίο γράμμα και ένας αριθμός.
+
+Στη συνέχεια κάνε login από το frontend στο `http://localhost:4200`.
 
 ---
 
@@ -129,7 +154,7 @@ GymAppV2/
 Μετά την εκκίνηση του backend, η πλήρης τεκμηρίωση των endpoints είναι διαθέσιμη μέσω **Scalar** στο:
 
 ```
-https://localhost:7000/scalar
+http://localhost:{port}/scalar
 ```
 
 ---
